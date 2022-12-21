@@ -44,7 +44,7 @@ public class AccountServiceImpl implements AccountService {
         if (Objects.nonNull(account.getStaffID())){
             accDB.setStatus(account.getStaffID());
         }
-        return saveAccount(accDB);
+        return accountRepository.save(accDB);
     }
 
     @Override

@@ -1,15 +1,16 @@
 package com.example.demo.entities;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
+import org.hibernate.annotations.JdbcTypeCode;
+import org.hibernate.type.SqlTypes;
 
 @Entity
 @Table(name = "account")
 public class Account {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "account_id", nullable = false)
+    @JdbcTypeCode(SqlTypes.INTEGER)
     private Integer accountID;
 
     public Integer getAccountID() {
