@@ -29,6 +29,9 @@ public class AccountServiceImpl implements AccountService {
     @Override
     public Account updateAccount(Account account, int accountID) {
         Account accDB = accountRepository.findById(accountID).get();
+        if (Objects.nonNull(account.getAccountID())){
+            accDB.setAccountID(account.getAccountID());
+        }
         if (Objects.nonNull(account.getAccountName())&&!"".equalsIgnoreCase(account.getAccountName())){
             accDB.setAccountName(account.getAccountName());
         }
