@@ -3,10 +3,9 @@ package com.example.demo.entities;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "bill_detail")
+@Table(name = "billdetail")
 public class BillDetail {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "bill_id", nullable = false)
     private Integer billID;
 
