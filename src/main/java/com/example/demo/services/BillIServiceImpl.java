@@ -3,11 +3,13 @@ package com.example.demo.services;
 import com.example.demo.entities.Bill;
 import com.example.demo.repositories.BillRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Objects;
 
-public class BillImpl implements BillService{
+@Service
+public class BillIServiceImpl implements BillService{
     @Autowired
     private BillRepository billRepository;
     @Override
